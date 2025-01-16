@@ -1,0 +1,45 @@
+{
+  "name": "money-market",
+  "version": "0.1.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node:flaretest": "hardhat node --fork https://coston2-api.flare.network/ext/C/rpc",
+    "deploy:local": "hardhat run script/deploy-test.ts --network localhost",
+    "deploy:flaretest": "hardhat run script/deploy-test.ts --network testnet",
+    "manipulate:flaretest": "hardhat run script/networkManipulation.ts --network testnet"
+  },
+  "devDependencies": {
+    "@defi-wonderland/smock": "^2.3.4",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@quadrata/contracts": "^1.0.3",
+    "bignumber.js": "9.0.0",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.22.15",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.5.1",
+    "@openzeppelin/contracts": "^4.9.0",
+    "@openzeppelin/contracts-upgradeable": "^4.9.0",
+    "@openzeppelin/hardhat-upgrades": "^1.27.0",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@uniswap/v3-periphery": "^1.4.4",
+    "graphql": "^16.9.0",
+    "graphql-request": "^6.1.0"
+  },
+  "resolutions": {
+    "scrypt.js": "https://registry.npmjs.org/@compound-finance/ethereumjs-wallet/-/ethereumjs-wallet-0.6.3.tgz",
+    "**/ganache-core": "github:compound-finance/ganache-core.git#jflatow/unbreak-fork"
+  },
+  "description": "`npm run node:flaretest` `npm run deploy:local`",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
